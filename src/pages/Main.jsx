@@ -55,7 +55,7 @@ function Main() {
       <BigDiv2>
         <MainImg src='./수정저성.png' />
         <LogoStyle1>todo mate</LogoStyle1>
-        <LogoStyle2>할일을 작성하고 관리하세요</LogoStyle2>
+        <LogoStyle2>할일을 작성하고 관리하세요!</LogoStyle2>
       </BigDiv2>
       <LoginButton type='button' value='로그인' onClick={LoginClick} />
     </BigDiv1>
