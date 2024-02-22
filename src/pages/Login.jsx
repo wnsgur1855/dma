@@ -1,5 +1,5 @@
 import React from 'react';
-import { BigDiv1 } from './Main';
+import { BigDiv1 } from './FristPage';
 import styled from 'styled-components';
 
 const TopBack = styled.div`
