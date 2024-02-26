@@ -5,11 +5,12 @@ import Login from '../pages/Login';
 import Main from '../pages/Main';
 import ProfileEdit from '../pages/ProfileEdit';
 import MyProfile from '../pages/MyProfile';
-import BottomBar from '../layout/BottomBar';
+import TopBar from '../layout/TopBar';
 
 function Router() {
   return (
     <BrowserRouter>
+      <TopBar />
       <Routes>
         <Route path='/' element={<FristPage />} />
         <Route path='login' element={<Login />} />
@@ -17,7 +18,6 @@ function Router() {
         <Route path='myProfile' element={<MyProfile />} />
         <Route path='profileEdit' element={<ProfileEdit />} />
       </Routes>
-      <BottomBar />
     </BrowserRouter>
   );
 }

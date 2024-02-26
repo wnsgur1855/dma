@@ -1,6 +1,7 @@
 import React from 'react';
 import { BigDiv1 } from './FristPage';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 const TopBack = styled.div`
   display: flex;
@@ -14,6 +15,10 @@ const InputStyle = styled.input`
 `;
 
 function Login() {
+  const navigate = useNavigate();
+  const goMain = () => {
+    navigate('/main');
+  };
   return (
     <BigDiv1 gap='5px'>
       <TopBack>
@@ -21,7 +26,7 @@ function Login() {
       </TopBack>
       <InputStyle placeholder='이메일' />
       <InputStyle placeholder='비밀번호' />
-      <input type='button' value='확인' />
+      <input type='button' value='확인' onClick={goMain} />
     </BigDiv1>
   );
 }
