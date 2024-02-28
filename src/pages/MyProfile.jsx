@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Text } from '../components/Profile';
 import CommonTop from '../components/CommonTop';
+import CommonModal from '../elements/CommonModal';
+import ProfileEdit from './ProfileEdit';
 
 const Div1 = styled.div`
   display: flex;
@@ -32,6 +34,7 @@ const Div4 = styled.img`
   height: 170px;
   border-radius: 50%;
   background-color: wheat;
+  cursor: pointer;
 `;
 
 const Div5 = styled.div`
@@ -82,13 +85,30 @@ const MemoContent = styled.div`
 `;
 
 function MyProfile() {
+  const [showModal, setShowModal] = useState(false);
+  const [modalContent, setModalContent] = useState(null);
+
+  const openModal = (content) => {
+    setModalContent(content);
+    setShowModal(true);
+  };
+
+  const closeModal = (content) => {
+    setShowModal(false);
+    setModalContent(content);
+  };
+
   return (
     <>
       <CommonTop text={'나의 프로필'} text1={'확인'} />
       <Div1>
         <Div2>
           <Div3>
-            <Div4 src='./수정저성.PNG' />
+            <Div4
+              src='./수정저성.PNG'
+              onClick={() => openModal(<ProfileEdit />)}
+            />
+            {showModal && <CommonModal closeModal={closeModal} />}
             <Div5>
               <ProfileText>박준혁</ProfileText>
               <Text color='gray'>wnsgur1855@naver.com</Text>

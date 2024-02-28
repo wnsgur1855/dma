@@ -6,7 +6,7 @@ const EditBox = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   padding: 30px;
 `;
 
@@ -15,7 +15,7 @@ const ImgEdit = styled.img`
   height: 70px;
   border-radius: 50%;
   background-color: wheat;
-  padding: 20px;
+  padding: 25px;
   cursor: pointer;
 `;
 
@@ -34,7 +34,7 @@ const TextDiv = styled.div`
 `;
 
 const TextInput = styled.input`
-  width: 70vw;
+  /* width: 70vw; */
   height: 50px;
   border: none;
   border-bottom: 1px solid black;
