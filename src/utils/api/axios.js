@@ -4,7 +4,7 @@ import React from 'react';
 //get 요청
 export const getItem = async () => {
   const response = await axios.get(
-    'http://localhost:8080/api/events/${createdAt}'
+    'http://localhost:8080/api/events/${eventAt}'
   );
   console.log('서버와 연결 성공!');
   return response;
